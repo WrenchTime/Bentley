@@ -1721,7 +1721,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "111E"}, "freq": 1,
   "signals": [
-    {"id": "BENTLEY_BOOST_P_ACT_7E0_V2", "path": "Engine", "fmt": { "len": 16, "max": 5242, "mul": 2, "div": 25, "unit": "unknown" }, "name": "Boost pressure, actual"}
+    {"id": "BENTLEY_BOOST_P_ACT_7E0", "path": "Engine", "fmt": { "len": 16, "max": 5242, "mul": 2, "div": 25, "unit": "unknown" }, "name": "Boost pressure, actual"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "111F"}, "freq": 1,
   "signals": [
@@ -2241,9 +2241,8 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "11F0"}, "freq": 1,
   "signals": [
-    {"id": "BENTLEY_BOOST_P_ACT",     "path": "Engine", "fmt": { "len": 16, "max": 5119,      "mul": 5, "div": 64, "unit": "unknown" }, "name": "Boost pressure, actual"},
-    {"id": "BENTLEY_ACT_TURBO_BOOST", "path": "Engine", "fmt": { "len": 16, "max": 2,                              "unit": "bars"    }, "name": "Actual turbo boost"},
-    {"id": "BENTLEY_BOOST_P_ACT_7E0", "path": "Engine", "fmt": { "len": 16, "max": 5119.9218, "mul": 5, "div": 64, "unit": "unknown" }, "name": "Boost pressure, actual"}
+    {"id": "BENTLEY_BOOST_P_ACT",     "path": "Engine", "fmt": { "len": 16, "max": 5119, "mul": 5, "div": 64,  "unit": "unknown"    }, "name": "Boost pressure, actual"},
+    {"id": "BENTLEY_ACT_TURBO_BOOST", "path": "Engine", "fmt": { "len": 16, "max": 511,            "div": 128, "unit": "kilopascal" }, "name": "Actual turbo boost",     "suggestedMetric": "absoluteBoostPressure"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "11F1"}, "freq": 0.25,
   "signals": [
@@ -4914,7 +4913,7 @@
 { "hdr": "7E1", "dbg": true, "cmd": {"22": "210F"}, "freq": 2,
   "signals": [
     {"id": "BENTLEY_GEAR",           "path": "Transmission", "fmt": { "len": 8, "max": 255,                       "unit": "scalar" }, "name": "Current gear", "description": "The automatic transmission gear."},
-    {"id": "BENTLEY_MQB_TCM_I_GEAR", "path": "Transmission", "fmt": { "len": 8, "max": 253, "min": -2, "add": -2, "unit": "scalar" }, "name": "Current gear"},
+    {"id": "BENTLEY_MQB_TCM_I_GEAR", "path": "Transmission", "fmt": { "len": 8, "max": 253, "min": -2, "add": -2, "unit": "scalar" }, "name": "Current gear", "suggestedMetric": "gear"},
     {"id": "BENTLEY_GEAR_SHFT", "path": "Transmission", "name": "Shift gear", "fmt": {"len": 8, "map": {
           "1": { "description": "Reverse", "value": "REVERSE" },
           "2": { "description": "Park",    "value": "PARK" },
